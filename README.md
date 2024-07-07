@@ -26,3 +26,4 @@ Use ``npm install`` to automatically add the modules needed on the project or ma
 ```bash
 npm install axios date-fns tailwindcss postcss autoprefixer
 ```
+Add ``.env.local`` on the root folder and paste the WhoIsRecord API KEY with the name ``NEXT_PUBLIC_API_KEY``.
