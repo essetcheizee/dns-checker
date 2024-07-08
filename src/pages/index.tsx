@@ -11,6 +11,7 @@ export default function Home() {
   const [data, setData] = useState<DomainData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [infoType, setInfoType] = useState('domain');
 
   const handleLookup = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -54,11 +55,35 @@ export default function Home() {
                     </button>
                 </div>
             </form>
+            <div className='flex mb-2 gap-2 flex-col md:flex-row'>
+              <label>
+                <input
+                  type="radio"
+                  name="infoType"
+                  value="domain"
+                  checked={infoType === 'domain'}
+                  onChange={() => setInfoType('domain')}
+                  className='mr-1'
+                />
+                Domain Information
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="infoType"
+                  value="contact"
+                  checked={infoType === 'contact'}
+                  onChange={() => setInfoType('contact')}
+                  className='mr-1'
+                />
+                Contact Information
+              </label>
+            </div>
 
             {loading && <Spinner />}
             {error && <Error message={error} />}
-            {data && <DomainInfo data={data} />}
-            {data && <ContactInfo data={data} />}
+            {data && infoType === 'domain' && <DomainInfo data={data} />}
+            {data && infoType === 'contact' && <ContactInfo data={data} />}
         </div>
     </div>
   );

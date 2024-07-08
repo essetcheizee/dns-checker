@@ -30,7 +30,7 @@ body {
 
 /* Custom CSS */
 .main-wrapper{
-  @apply flex items-center justify-center bg-gray-50 md:mt-0 mt-[72px] md:min-h-screen ;
+  @apply flex items-center justify-center bg-gray-50 md:mt-0 mt-[72px] md:min-h-screen p-2 md:p-0;
 }
 .card{
   @apply bg-white p-2 rounded-lg shadow-lg w-full md:p-8;
