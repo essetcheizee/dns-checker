@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className="main-wrapper">
         <div className="card">
-            <h1 className="md:text-3xl font-bold mb-4 text-2xl">Domain Lookup Hello World!</h1>
+            <h1 className="md:text-3xl font-bold mb-4 text-2xl">Domain Lookup</h1>
             <form onSubmit={handleLookup} className="space-y-4 mb-4">
                 <label htmlFor="domain" className="block text-gray-700">Domain Name</label>
                 <div className='flex items-start md:items-center gap-2 m-0 flex-col md:flex-row'>
